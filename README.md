@@ -1,4 +1,16 @@
 THIS README FILE COVERS EXPLANATION FOR EACH PART OF THE ACTIVITY BUT I'VE EXPLAINED THEM INDIVIDUALLY TOO. HAPPY READING :))
+---
+
+# KNOWELLA AI Intern Test Submission
+
+This repository contains two AI system prototypes:
+
+1) Offline Knowledge Assistant (RAG System)
+2) Worker Posture & Safety Monitoring (Computer Vision)
+
+Both systems are designed as product-aligned AI intelligence layers for enterprise operations, safety, and knowledge automation.
+
+---
 
 # AI-Powered Offline Knowledge Assistant (RAG System)
 
