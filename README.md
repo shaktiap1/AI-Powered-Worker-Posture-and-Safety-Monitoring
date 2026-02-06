@@ -491,7 +491,7 @@ An AI-powered safety intelligence layer that converts industrial camera footage 
 
 ---
 
-# PART 1 :- Problem Statement, Strategy & Product Alignment
+#  Problem Statement, Strategy & Product Alignment
 
 ## 1️:- Problem Context
 
