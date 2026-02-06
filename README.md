@@ -4,7 +4,7 @@
 
 A fully offline AI knowledge system that converts static documents into an intelligent, query-driven reasoning assistant using local embeddings, semantic search, and local LLM inference.
 
-An AI-powered knowledge intelligence layer that converts unstructured documents into contextual answers, grounded insights, and explainable responses — without using any cloud APIs.
+An AI-powered knowledge intelligence layer that converts unstructured documents into contextual answers, grounded insights, and explainable responses without using any cloud APIs.
 
 ---
 
