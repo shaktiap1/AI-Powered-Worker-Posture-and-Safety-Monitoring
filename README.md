@@ -989,7 +989,7 @@ A product-aligned prototype.
 
 ---
 
-## Part 3 – Short Concept Answers
+## Short Concept Answers
 
 ### 1. What is a RAG system and why is it better than a plain chatbot?
 
@@ -1030,5 +1030,5 @@ This makes detection more stable and much closer to real-world working condition
 
 
 
-THANKYOU SO MUCH AND HAVE A GREAT YEAR AHEAD ! MAY YOU WIN THIS TIME :) SHAKTESH PANDEY
+THANKYOU SO MUCH AND HAVE A GREAT YEAR AHEAD ! MAY YOU WIN THIS TIME :) SHAKTESH PANDEY - https://linktr.ee/Shaktesh_Pandey 
 
