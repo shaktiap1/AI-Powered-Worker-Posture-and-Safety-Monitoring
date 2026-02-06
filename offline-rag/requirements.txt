@@ -1,0 +1,40 @@
+# Core
+python-dotenv>=1.0.1
+
+# PDF + preprocessing
+unstructured[local-inference]>=0.15.13
+pypdf>=4.3.1
+nltk>=3.9.1
+
+# Embeddings
+sentence-transformers>=3.0.1
+torch>=2.3.1
+transformers>=4.44.2
+
+# Vector store
+faiss-cpu>=1.8.0.post1
+numpy>=1.26.4
+
+# RAG framework
+langchain>=0.2.14
+langchain-community>=0.2.12
+langchain-core>=0.2.36
+
+# Reranker
+accelerate>=0.34.2
+
+# Cache
+redis>=5.0.8
+
+# LLM (local)
+ollama>=0.3.3
+
+# UI
+streamlit>=1.38.0
+
+# Utilities
+tqdm>=4.66.5
+pydantic>=2.8.2
+
+fastapi>=0.115.0
+uvicorn>=0.30.6
