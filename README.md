@@ -1,3 +1,5 @@
+THIS README FILE COVERS EXPLANATION FOR EACH PART OF THE ACTIVITY BUT I'VE EXPLAINED THEM INDIVIDUALLY TOO. HAPPY READING :))
+
 # AI-Powered Offline Knowledge Assistant (RAG System)
 
 ## Fully Local Retrieval-Augmented Generation Prototype
