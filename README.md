@@ -22,6 +22,20 @@ An AI-powered knowledge intelligence layer that converts unstructured documents 
 
 ---
 
+# Quick Start
+
+Offline RAG:
+
+python scripts/ingest_docs.py  
+python scripts/build_index.py  
+streamlit run ui/streamlit_app.py  
+
+Object Detection:
+
+python src/main.py
+
+---
+
 # Problem Statement, Strategy & Product Alignment
 
 ## 1. Problem Context
@@ -504,6 +518,8 @@ A production-aligned semantic knowledge system.
 An AI-powered safety intelligence layer that converts industrial camera footage into structured posture insights, safety alerts, and analytics.
 
 ---
+
+
 
 #  Problem Statement, Strategy & Product Alignment
 
