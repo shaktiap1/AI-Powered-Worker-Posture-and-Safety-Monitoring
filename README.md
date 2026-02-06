@@ -1,14 +1,14 @@
-# 🛡️ AI-Powered Worker Posture & Safety Monitoring
+###  AI-Powered Worker Posture & Safety Monitoring
 
-## Computer Vision Prototype (YOLO + OpenCV)
+# Computer Vision Prototype (YOLO + OpenCV)
 
 An AI-powered safety intelligence layer that converts industrial camera footage into structured posture insights, safety alerts, and analytics.
 
 ---
 
-# 📌 PART 1 — Problem Statement, Strategy & Product Alignment
+# PART 1 :- Problem Statement, Strategy & Product Alignment
 
-## 1️⃣ Problem Context
+## 1️:- Problem Context
 
 Industrial environments such as factories, warehouses, and construction sites face continuous operational and safety challenges:
 
@@ -22,7 +22,7 @@ Organizations need an automated system that interprets camera feeds and extracts
 
 ---
 
-## 2️⃣ Business Problem (Knowella Context)
+## 2️:- Business Problem (I used Knowella as my context)
 
 Knowella builds AI-powered platforms focused on:
 
@@ -43,7 +43,7 @@ This project introduces a **computer vision intelligence layer** that converts v
 
 ---
 
-## 3️⃣ Proposed Solution
+## 3️: Proposed Solution
 
 We design an AI module that:
 
@@ -67,7 +67,7 @@ This simulates an intelligent inspection camera system.
 
 ---
 
-## 4️⃣ Alignment with Knowella’s Product Vision
+## 4️: Alignment with Knowella’s Product Vision
 
 This prototype directly supports:
 
@@ -84,7 +84,7 @@ It can act as a foundation for:
 
 ---
 
-## 5️⃣ Conceptual System Flow
+## 5️: Conceptual System Flow
 
 ```mermaid
 flowchart TD
@@ -98,7 +98,7 @@ flowchart TD
 
 ---
 
-## 6️⃣ Safety Intelligence Mapping
+## 6️: Safety Intelligence Mapping
 
 | Posture  | Interpretation           | Safety State |
 | -------- | ------------------------ | ------------ |
@@ -108,7 +108,7 @@ flowchart TD
 
 ---
 
-## 7️⃣ Value Proposition
+## 7️: Value Proposition
 
 Transforms:
 
@@ -123,9 +123,9 @@ Enables:
 
 ---
 
-# 🏗️ PART 2 — Technical Architecture
+## Technical Architecture
 
-## 1️⃣ System Architecture Overview
+# 1: System Architecture Overview
 
 ```mermaid
 flowchart LR
@@ -142,7 +142,7 @@ flowchart LR
 
 ---
 
-## 2️⃣ Component-Level Architecture
+# 2: Component-Level Architecture
 
 ```mermaid
 graph TD
@@ -159,7 +159,7 @@ graph TD
 
 ---
 
-## 3️⃣ Detection Pipeline Flow
+# 3️: Detection Pipeline Flow
 
 ```mermaid
 sequenceDiagram
@@ -178,9 +178,9 @@ sequenceDiagram
 
 ---
 
-## 4️⃣ Module Responsibilities
+# 4️: Module Responsibilities
 
-### `detector.py`
+## `detector.py`
 
 * Loads YOLO model
 * Detects people in frames
@@ -188,7 +188,7 @@ sequenceDiagram
 
 ---
 
-### `posture.py`
+## `posture.py`
 
 Posture estimation using bounding box geometry:
 
@@ -202,7 +202,7 @@ height / width ratio
 
 ---
 
-### `safety_rules.py`
+## `safety_rules.py`
 
 | Input    | Output  |
 | -------- | ------- |
@@ -212,7 +212,7 @@ height / width ratio
 
 ---
 
-### `analytics.py`
+## `analytics.py`
 
 Tracks:
 
@@ -223,7 +223,7 @@ Tracks:
 
 ---
 
-### `main.py`
+## `main.py`
 
 Central pipeline:
 
@@ -233,7 +233,7 @@ Frame → Detect → Classify → Tag → Draw → Analyze → Save
 
 ---
 
-## 5️⃣ File Architecture
+# 5️: File Architecture
 
 ```
 knowella_cv_safety_ai/
@@ -262,7 +262,7 @@ knowella_cv_safety_ai/
 
 ---
 
-## 6️⃣ Data Flow Diagram
+# 6️: Data Flow Diagram
 
 ```mermaid
 flowchart TD
@@ -278,11 +278,11 @@ flowchart TD
 
 ---
 
-# 📊 PART 3 — Outputs & Implementation Guide
+## Outputs & Implementation Guide
 
-## 1️⃣ Expected Outputs
+# Expected Outputs
 
-### 🎥 Visual Output
+### Visual Output
 
 Processed video showing:
 
@@ -299,7 +299,7 @@ Person | Bending | RISK
 
 ---
 
-### 📈 Analytics Report
+## Analytics Report
 
 ```
 Frames processed: 500
@@ -314,7 +314,7 @@ Risk Events Detected: 41
 
 ---
 
-## 2️⃣ System Output Architecture
+## System Output Architecture
 
 ```mermaid
 flowchart LR
@@ -326,21 +326,21 @@ flowchart LR
 
 ---
 
-## 3️⃣ Future Enhancements
+##  Future Enhancements
 
-### 🔹 Short-Term
+###  Short-Term
 
 * FPS monitoring
 * Person tracking across frames
 * Zone-based alerts
 
-### 🔹 Mid-Term
+### Mid-Term
 
 * Persistent bending detection
 * Worker presence tracking
 * Automated safety violation alerts
 
-### 🔹 Advanced
+### Advanced
 
 * Pose estimation using keypoints
 * PPE detection (helmet/vest)
@@ -349,9 +349,9 @@ flowchart LR
 
 ---
 
-## 4️⃣ Implementation Guide
+## 4️ Implementation Guide
 
-### Step 1 — Install Dependencies
+### Step 1 : Install Dependencies
 
 ```bash
 pip install ultralytics opencv-python numpy
@@ -359,7 +359,7 @@ pip install ultralytics opencv-python numpy
 
 ---
 
-### Step 2 — Add Input Video
+### Step 2 : Add Input Video
 
 Place video inside:
 
@@ -369,7 +369,7 @@ Place video inside:
 
 ---
 
-### Step 3 — Run System
+### Step 3 : Run System
 
 ```bash
 python src/main.py
@@ -377,14 +377,14 @@ python src/main.py
 
 ---
 
-### Step 4 — Outputs Generated
+### Step 4 : Outputs Generated
 
 * Annotated video saved in `/outputs`
 * Safety analytics report generated
 
 ---
 
-## 5️⃣ Strategic Guardrails
+##  Strategic Guardrails
 
 Before adding any new feature, validate:
 
@@ -397,7 +397,7 @@ If not aligned, it should not be implemented.
 
 ---
 
-## 6️⃣ Core Project Identity
+###  Core Project Identity
 
 **An AI-powered safety intelligence layer for smart industrial camera systems.**
 
