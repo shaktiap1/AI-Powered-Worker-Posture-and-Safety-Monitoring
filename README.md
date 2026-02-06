@@ -8,7 +8,7 @@ An AI-powered knowledge intelligence layer that converts unstructured documents 
 
 ---
 
-# PART 1 — Problem Statement, Strategy & Product Alignment
+# Problem Statement, Strategy & Product Alignment
 
 ## 1. Problem Context
 
@@ -133,7 +133,7 @@ Enables:
 
 ---
 
-# PART 2 — Technical Architecture
+# Technical Architecture
 
 ## 1. System Architecture Overview
 
@@ -292,7 +292,7 @@ flowchart TD
 
 ---
 
-# PART 3 — Outputs & Implementation Guide
+# Outputs & Implementation Guide
 
 ## Expected Outputs
 
@@ -476,7 +476,10 @@ Not a demo.
 Not a tutorial.
 A production-aligned semantic knowledge system.
 
+---
+# NOW WE'LL MOVE TOWARDS THE SECOND PART OF THIS PROJECT 
 
+---
 
 # AI-Powered Worker Posture & Safety Monitoring
 
