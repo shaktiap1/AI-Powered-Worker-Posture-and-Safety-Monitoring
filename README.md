@@ -1,6 +1,8 @@
-###  AI-Powered Worker Posture & Safety Monitoring
+# AI-Powered Worker Posture & Safety Monitoring
 
-# Computer Vision Prototype (YOLO + OpenCV)
+## Computer Vision Prototype (YOLO + OpenCV)
+
+> A real-time computer vision system that converts industrial camera feeds into posture-based safety intelligence, risk signals, and operational analytics.
 
 An AI-powered safety intelligence layer that converts industrial camera footage into structured posture insights, safety alerts, and analytics.
 
@@ -22,9 +24,9 @@ Organizations need an automated system that interprets camera feeds and extracts
 
 ---
 
-## 2️:- Business Problem (I used Knowella as my context)
+## 2️:- Business Problem (Contextualized for Industrial Safety Platforms)
 
-Knowella builds AI-powered platforms focused on:
+Modern safety and operations platforms focus on:
 
 * Camera-powered inspections
 * Safety compliance tracking
@@ -32,24 +34,24 @@ Knowella builds AI-powered platforms focused on:
 * Operational intelligence
 * Video-based monitoring
 
-However, raw video footage does NOT provide:
+However, raw video footage alone does NOT provide:
 
-* Ergonomic risk detection
+* Ergonomic risk visibility
 * Worker behavior intelligence
 * Automated posture monitoring
 * Safety analytics
 
-This project introduces a **computer vision intelligence layer** that converts video into structured safety signals.
+This project introduces a computer vision intelligence layer that converts passive video into structured safety signals.
 
 ---
 
-## 3️: Proposed Solution
+## 3️:- Proposed Solution
 
 We design an AI module that:
 
 1. Detects workers using a pretrained YOLO model
 
-2. Classifies posture:
+2. Classifies posture (heuristic-based estimation):
 
    * Standing
    * Sitting
@@ -63,11 +65,11 @@ We design an AI module that:
 
 4. Generates analytics from video streams
 
-This simulates an intelligent inspection camera system.
+This simulates an intelligent inspection camera system capable of converting visual data into operational safety insights.
 
 ---
 
-## 4️: Alignment with Knowella’s Product Vision
+## 4️:- Alignment with Industrial Product Vision
 
 This prototype directly supports:
 
@@ -79,12 +81,12 @@ This prototype directly supports:
 It can act as a foundation for:
 
 * Smart inspection cameras
-* Ergonomic risk detection
-* Automated safety reports
+* Ergonomic risk monitoring systems
+* Automated safety reporting tools
 
 ---
 
-## 5️: Conceptual System Flow
+## 5️:- Conceptual System Flow
 
 ```mermaid
 flowchart TD
@@ -98,34 +100,34 @@ flowchart TD
 
 ---
 
-## 6️: Safety Intelligence Mapping
+## 6️:- Safety Intelligence Mapping
 
-| Posture  | Interpretation           | Safety State |
-| -------- | ------------------------ | ------------ |
-| Standing | Normal work behavior     | SAFE         |
-| Sitting  | Idle / monitoring needed | MONITOR      |
-| Bending  | Ergonomic risk           | RISK         |
+| Posture  | Interpretation                   | Safety State |
+| -------- | -------------------------------- | ------------ |
+| Standing | Normal working posture           | SAFE         |
+| Sitting  | Idle / monitoring required       | MONITOR      |
+| Bending  | Potential ergonomic risk posture | RISK         |
 
 ---
 
-## 7️: Value Proposition
+## 7️:- Value Proposition
 
 Transforms:
 
-**Passive video → Active safety intelligence**
+Passive video → Active safety intelligence
 
 Enables:
 
-* Injury prevention
+* Early risk awareness
 * Compliance support
 * Automated inspections
-* Operational insights
+* Operational insights from visual data
 
 ---
 
-## Technical Architecture
+# Technical Architecture
 
-# 1: System Architecture Overview
+## 1️: System Architecture Overview
 
 ```mermaid
 flowchart LR
@@ -142,7 +144,7 @@ flowchart LR
 
 ---
 
-# 2: Component-Level Architecture
+## 2️: Component-Level Architecture
 
 ```mermaid
 graph TD
@@ -159,7 +161,7 @@ graph TD
 
 ---
 
-# 3️: Detection Pipeline Flow
+## 3️: Detection Pipeline Flow
 
 ```mermaid
 sequenceDiagram
@@ -178,9 +180,9 @@ sequenceDiagram
 
 ---
 
-# 4️: Module Responsibilities
+## 4️: Module Responsibilities
 
-## `detector.py`
+### `detector.py`
 
 * Loads YOLO model
 * Detects people in frames
@@ -188,7 +190,7 @@ sequenceDiagram
 
 ---
 
-## `posture.py`
+### `posture.py`
 
 Posture estimation using bounding box geometry:
 
@@ -197,12 +199,12 @@ height / width ratio
 ```
 
 * Tall box → Standing
-* Medium → Sitting
-* Short/Wide → Bending
+* Medium ratio → Sitting
+* Short/Wide box → Bending
 
 ---
 
-## `safety_rules.py`
+### `safety_rules.py`
 
 | Input    | Output  |
 | -------- | ------- |
@@ -212,7 +214,7 @@ height / width ratio
 
 ---
 
-## `analytics.py`
+### `analytics.py`
 
 Tracks:
 
@@ -223,7 +225,7 @@ Tracks:
 
 ---
 
-## `main.py`
+### `main.py`
 
 Central pipeline:
 
@@ -233,17 +235,15 @@ Frame → Detect → Classify → Tag → Draw → Analyze → Save
 
 ---
 
-# 5️: File Architecture
+## 5️: File Architecture
 
 ```
 knowella_cv_safety_ai/
 │
 ├── data/
-│   ├── sample_video.mp4
-│   └── sample_image.jpg
+│   └── sample_video.mp4
 │
-├── models/
-│   └── yolov8n.pt
+├── models/   (auto-managed by YOLO if weights are downloaded)
 │
 ├── src/
 │   ├── detector.py
@@ -262,7 +262,7 @@ knowella_cv_safety_ai/
 
 ---
 
-# 6️: Data Flow Diagram
+## 6️: Data Flow Diagram
 
 ```mermaid
 flowchart TD
@@ -278,23 +278,24 @@ flowchart TD
 
 ---
 
-## Outputs & Implementation Guide
+# Outputs & Implementation Guide
 
-# Expected Outputs
+## Expected Outputs
 
 ### Visual Output
 
 Processed video showing:
 
 * Bounding boxes
-* Posture label
-* Safety tag
+* Posture labels
+* Safety tags
+* Confidence scores
 
 Example overlay:
 
 ```
-Person | Standing | SAFE
-Person | Bending | RISK
+Standing | SAFE | 0.87
+Bending  | RISK | 0.81
 ```
 
 ---
@@ -326,32 +327,9 @@ flowchart LR
 
 ---
 
-##  Future Enhancements
+# Implementation Guide
 
-###  Short-Term
-
-* FPS monitoring
-* Person tracking across frames
-* Zone-based alerts
-
-### Mid-Term
-
-* Persistent bending detection
-* Worker presence tracking
-* Automated safety violation alerts
-
-### Advanced
-
-* Pose estimation using keypoints
-* PPE detection (helmet/vest)
-* Fall detection
-* Integration with inspection workflows
-
----
-
-## 4️ Implementation Guide
-
-### Step 1 : Install Dependencies
+## Step 1 : Install Dependencies
 
 ```bash
 pip install ultralytics opencv-python numpy
@@ -359,7 +337,7 @@ pip install ultralytics opencv-python numpy
 
 ---
 
-### Step 2 : Add Input Video
+## Step 2 : Add Input Video
 
 Place video inside:
 
@@ -369,7 +347,7 @@ Place video inside:
 
 ---
 
-### Step 3 : Run System
+## Step 3 : Run System
 
 ```bash
 python src/main.py
@@ -377,14 +355,129 @@ python src/main.py
 
 ---
 
-### Step 4 : Outputs Generated
+## Step 4 : Outputs Generated
 
 * Annotated video saved in `/outputs`
 * Safety analytics report generated
 
 ---
 
-##  Strategic Guardrails
+# Real Execution Outputs
+
+## 1) Processed Video
+
+Saved at:
+
+```
+outputs/processed_video.mp4
+```
+
+Contains:
+
+* Detection boxes
+* Posture labels
+* Safety tags
+* Confidence scores
+
+This serves as visual proof of system functionality.
+
+---
+
+## 2) Analytics Report
+
+Saved at:
+
+```
+outputs/analytics_report.txt
+```
+
+Contains:
+
+* Total frames processed
+* Total person detections
+* Posture distribution
+* Risk event summary
+
+---
+
+# Runtime Execution Flow
+
+When `main.py` is executed:
+
+1. Video frames are read using OpenCV
+2. YOLO detects persons in each frame
+3. Bounding box geometry is used for posture estimation
+4. Safety rules convert posture → safety state
+5. Overlays are drawn on frames
+6. Analytics engine updates statistics
+7. Annotated frames are saved into output video
+8. Final analytics report is generated
+
+This simulates an AI-powered safety inspection pipeline.
+
+---
+
+# Tech Stack
+
+* Python
+* YOLOv8 (Ultralytics)
+* OpenCV
+* NumPy
+
+Design approach:
+
+* Fully local execution
+* No paid APIs
+* Modular architecture
+* Real-time video processing
+
+---
+
+# Why This Prototype Is Different
+
+This is not just an object detection demo.
+
+It demonstrates:
+
+* Behavioral interpretation using computer vision
+* Safety intelligence extraction from video
+* Risk-aware posture monitoring
+* Modular production-style architecture
+* Analytics generation from visual data
+
+This makes the system applicable to:
+
+* Smart inspection cameras
+* Workplace safety monitoring
+* Compliance reporting systems
+* Operational analytics platforms
+
+---
+
+# Future Enhancements
+
+## Short-Term
+
+* FPS monitoring
+* Person tracking across frames
+* Zone-based safety alerts
+
+## Mid-Term
+
+* Persistent bending detection
+* Worker presence tracking
+* Automated safety violation alerts
+
+## Advanced
+
+* Pose estimation using keypoints
+* PPE detection (helmet/vest)
+* Fall detection
+* Integration with inspection workflows
+
+---
+
+# Strategic Guardrails
 
 Before adding any new feature, validate:
 
@@ -397,9 +490,9 @@ If not aligned, it should not be implemented.
 
 ---
 
-###  Core Project Identity
+# Core Project Identity
 
-**An AI-powered safety intelligence layer for smart industrial camera systems.**
+An AI-powered safety intelligence layer for smart industrial camera systems.
 
 Not a demo.
 Not a tutorial.
