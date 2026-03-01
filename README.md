@@ -1,7 +1,7 @@
 THIS README FILE COVERS EXPLANATION FOR EACH PART OF THE ACTIVITY BUT I'VE EXPLAINED THEM INDIVIDUALLY TOO. HAPPY READING :))
 ---
 
-# KNOWELLA AI Intern Test Submission
+#
 
 This repository contains two AI system prototypes:
 
